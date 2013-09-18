@@ -4,13 +4,13 @@
 	"manifest_version": 2,
 	"description": "Check all requirements of a list of JIRA tickets via a JQL filter.",
 	"browser_action": {
-		"default_icon": "icon.png"
+		"default_icon": "style/images/icon.png"
 	},
     "content_scripts": [ {
-		"matches": ["http://jira.ontraport.com/browse/*?jql=*", "https://jira.ontraport.com/browse/*?jql=*" ],
-		"css": ["load.css"],
-		"js": ["jquery.js", "load.js"]
-	}],
+		"matches": ["http://jira.ontraport.com/browse/*?jql=*", "https://jira.ontraport.com/browse/*?jql=*"],
+		"css": ["style/css/load.css", "style/css/jquery.gritter.css"],
+		"js": ["js/jquery.js", "js/jquery.gritter.js", "js/load.js"]
+	} ],
 	"permissions": [
 		"tabs"
 	],
