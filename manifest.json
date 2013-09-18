@@ -1,0 +1,18 @@
+{
+	"name": "Auto Requirements Check",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "Check all requirements of a list of JIRA tickets via a JQL filter.",
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+    "content_scripts": [ {
+		"matches": ["http://jira.ontraport.com/browse/*?jql=*", "https://jira.ontraport.com/browse/*?jql=*" ],
+		"css": ["load.css"],
+		"js": ["jquery.js", "load.js"]
+	}],
+	"permissions": [
+		"tabs"
+	],
+	"incognito": "split"
+}
